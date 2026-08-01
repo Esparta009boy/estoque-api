@@ -15,7 +15,7 @@ module.exports = {
     if (config.features.usar_sqs) {
       estoque.forEach(item => {
         if (estoqueModel.verificarAlerta(item.qtd)) {
-          console.log(Enviando para o LocalStack SQS: );
+          console.log(Enviando para o LocalStack SQS:  + config.sqs_url);
           alertasEnviados++;
         }
       });
